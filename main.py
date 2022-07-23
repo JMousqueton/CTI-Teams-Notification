@@ -131,7 +131,7 @@ if Vendor != "":
         CVE ="[" + CVE + "] "
     Titre = "🚨 " + CVE + "Vulnérabillité chez " + Vendor + "<br>"
     if Product != "":
-        Product = "Produit(s) impacté(s) :" + Product + "<br>"
+        Product = "Produit(s) impacté(s) : " + Product + "<br>"
     if Level == "Critical":
         Level = "Criticité : 🔴 Critical <br>"
     if Level == "High":
