@@ -1,0 +1,33 @@
+name: CTI-Teams-Notification
+
+on:
+  pull_request:
+    types: [closed]
+  workflow_dispatch:
+
+# to consider: the use of action jobs to breakout each task
+# https://docs.github.com/en/actions/learn-github-actions/essential-features-of-github-actions#sharing-data-between-jobs
+
+jobs:
+  CTI_Notifier:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    environment: CI
+    steps:
+      - name: checkout the repo
+        uses: actions/checkout@v2
+      - name: install dependencies
+        run: |
+          pip3 install -r requirements.txt
+      - name: run scraper
+        env:
+          MSTEAMS_WEBHOOK_RANSOM: ${{ secrets.MSTEAMS_WEBHOOK_RANSOM }} 
+          MSTEAMS_WEBHOOK_CVE: ${{ secrets.MSTEAMS_WEBHOOK_CVE }} 
+        run: |
+          python3 main.py
+      - name: save changes
+        run: |
+          git config --global user.email "bot-parser@users.noreply.github.com"
+          git config --global user.name "Bot-Parser"
+          git commit --all --message "Updated by Bot-Parser" || echo "no changes to commit"
+          git push
