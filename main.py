@@ -140,6 +140,8 @@ if Vendor != "":
         CVSS = "Note CVSS v3 : " +  CVSS + "/10 <br>"
     if Msg !="": 
         Msg = "📝 : " +  Msg + "<br>"
+    if Source != "":
+        Source = "<br>🌍 : <a href=\"" + Source + "\">" +  Source + "</a><br>" 
     Texte = Msg + Level + CVSS + Product +  Comment + Source
     if send_teams(Url,Texte,Titre) == 200:
         fichier = open("addCVE.cfg", "w")
