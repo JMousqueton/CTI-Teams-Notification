@@ -39,9 +39,9 @@ def send_teams(webhook_url:str, content:str, title:str, color:str="000000") -> i
     )
     return response.status_code # Should be 200
 
-### 
-# Notification pour Ransomware
-## 
+###
+## Notification pour Ransomware
+##
 Url=os.getenv('MSTEAMS_WEBHOOK_RANSOM')
 
 config = ConfigParser(interpolation=None)
@@ -107,9 +107,9 @@ if Date != "":
         fichier.close()
         print('Une nouvelle cyberattaque a été notifiée')
 else: print('Pas de nouvelle cyberattaque notifiée')
-### 
+###
 # Notification pour CVE
-## 
+##
 Url=os.getenv('MSTEAMS_WEBHOOK_CVE')
 
 configCVE = ConfigParser(interpolation=None)
