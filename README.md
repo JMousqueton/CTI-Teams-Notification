@@ -11,4 +11,5 @@ Une action Github se déclenche sur cloture d'une PR et si les fichiers addCVE o
 ⚠️ Renseigner les environnements CI :
 - MSTEAMS_WEBHOOK_RANSOM
 - MSTEAMS_WEBHOOK_CVE 
+
 avec les URL "Webhook" de vos canaux Teams 
