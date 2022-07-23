@@ -1,22 +1,20 @@
 ##################################################
 ## Ransomware & CVE notifier for Teams
 ##################################################
-## License : MIT 
+## License : MIT
 ##################################################
 ## Author: #JMousqueton (Julien Mousqueton)
 ## Copyright: Copyright 2022
 ## Version: 1.x
 ## Maintainer: #JMousqueton (Julien Mousqueton)
-## Email: julien_at_mousqueton.io 
+## Email: julien_at_mousqueton.io
 ##################################################
-# Generic/Built-in 
+# Generic/Built-in
 import os
 import requests
 
 # Other Libs
 from configparser import ConfigParser
-# Config 
-
 
 def send_teams(webhook_url:str, content:str, title:str, color:str="000000") -> int:
     """
