@@ -2,6 +2,8 @@
 
 > For internal use :) 
 
+Quick & Dirty README.md 😛 
+
 Notification sur des canaux Teams d'une nouvelle CVE (via addCVE.cfg)
 
 Notification d'une nouvelle cyberattaque en France (via addRansomware.cfg)
