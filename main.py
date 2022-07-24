@@ -5,7 +5,7 @@
 ##################################################
 ## Author: #JMousqueton (Julien Mousqueton)
 ## Copyright: Copyright 2022
-## Version: 1.x
+## Version: 1.2
 ## Maintainer: #JMousqueton (Julien Mousqueton)
 ## Email: julien_at_mousqueton.io
 ##################################################
@@ -129,15 +129,15 @@ if Vendor != "":
         CVE ="[" + CVE + "] "
     Titre = "🚨 " + CVE + "Vulnérabillité chez " + Vendor + "<br>"
     if Product != "":
-        Product = "Produit(s) impacté(s) : " + Product + "<br>"
+        Product = "<b>Produit(s) impacté(s) : </b>" + Product + "<br>"
     if Level == "Critical":
-        Level = "Criticité : 🔴 Critical <br>"
+        Level = "<b>Criticité : </b>🔴 Critical<br>"
     if Level == "High":
-        Level = "Criticité : 🟠 High <br>"
+        Level = "<b>Criticité : </b>🟠 High<br>"
     if Level == "Medium":
-        Level = "Criticité : 🟡 Medium <br>"
+        Level = "<b>Criticité : </b>🟡 Medium<br>"
     if CVSS != "":
-        CVSS = "Note CVSS v3 : " +  CVSS + "/10 <br>"
+        CVSS = "<b>Note CVSS v3 :</b> " +  CVSS + "/10 <br>"
     if Msg !="": 
         Msg = "📝 : " +  Msg + "<br>"
     if Source != "":
