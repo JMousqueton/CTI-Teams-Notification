@@ -127,7 +127,7 @@ Comment = configCVE.get('CVE','Comment')
 if Vendor != "":
     if CVE != "": 
         CVE ="[" + CVE + "] "
-    Titre = "🚨 " + CVE + "Vulnérabillité chez " + Vendor + "<br>"
+    Titre = "🚨 " + CVE + "Vulnérabillité chez " + Vendor
     if Product != "":
         Product = "<b>Produit(s) impacté(s) : </b>" + Product + "<br>"
     if Level == "Critical":
