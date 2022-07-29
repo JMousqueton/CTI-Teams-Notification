@@ -103,7 +103,7 @@ if Date != "":
     Texte =  UrlVictime + Ransomware + Ransom + Exfiltration + Crypted + Deadline + Production + Source
     if send_teams(Url,Texte,Titre) == 200: 
         fichier = open("addRansomware.cfg", "w")
-        fichier.write("[Ransomware]\nDate = \nVictime = \nUrlVictime = \nRansomware =\nRansom = \nExfiltration = \nCrypted = \nProduction= \nDeadline = \nSource = \n")
+        fichier.write("[Ransomware]\nDate = \nVictime = \nUrlVictime = \nRansomware =\nRansom = \nExfiltration = \nCrypted = \nProduction = \nDeadline = \nSource = \n")
         fichier.close()
         print('Une nouvelle cyberattaque a été notifiée')
 else: print('Pas de nouvelle cyberattaque notifiée')
@@ -142,6 +142,8 @@ if Vendor != "":
         Msg = "📝 : " +  Msg + "<br>"
     if Source != "":
         Source = "<br>🌍 : <a href=\"" + Source + "\">" +  Source + "</a><br>" 
+    if Comment != "":
+        Comment = "🔎 : " + Comment + "<br>"
     Texte = Msg + Level + CVSS + Product +  Comment + Source
     if send_teams(Url,Texte,Titre) == 200:
         fichier = open("addCVE.cfg", "w")
