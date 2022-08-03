@@ -134,7 +134,7 @@ if Vendor != "":
         Level = "<b>Criticité : </b>🔴 Critical<br>"
     if Level == "High":
         Level = "<b>Criticité : </b>🟠 High<br>"
-    if Level == "Medium":
+    if Level == "Important":
         Level = "<b>Criticité : </b>🟡 Medium<br>"
     if CVSS != "":
         CVSS = "<b>Note CVSS v3 :</b> " +  CVSS + "/10 <br>"
